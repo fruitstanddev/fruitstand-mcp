@@ -16,4 +16,28 @@ jobs:
       - name: Lint shell scripts
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck
-          shellcheck scripts/*.sh
+          shellcheck scripts/*.sh docker-entrypoint.sh
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the bridge image
+        run: docker build -t fruitstand-mcp:ci .
+      - name: Image has the entrypoint and mcp-remote on PATH
+        run: docker run --rm --entrypoint sh fruitstand-mcp:ci -c 'test -x /usr/local/bin/docker-entrypoint.sh && command -v mcp-remote'
+
+  endpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hosted MCP answers tools/list (unauthenticated discovery)
+        run: |
+          curl -sS -X POST https://api.fruitstand.dev/mcp \
+            -H 'content-type: application/json' \
+            -H 'accept: application/json, text/event-stream' \
+            -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' > out.json
+          cat out.json
+          for tool in searchFunds getFund getTrailingReturns batchTrailingReturns getCalendarReturns batchCalendarReturns; do
+            grep -q "\"$tool\"" out.json || { echo "missing tool: $tool"; exit 1; }
+          done
+          echo "all six tools listed by the hosted server"

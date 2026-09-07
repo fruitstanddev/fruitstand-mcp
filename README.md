@@ -54,6 +54,22 @@ Authorization: Bearer YOUR_API_KEY
 
 Restart the client and the Fruit Stand tools appear.
 
+**Docker** — the same bridge as a container (this repo's `Dockerfile`), for clients that take a `docker` command or for one-click deploy from the [Glama listing](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp):
+
+```json
+{
+  "mcpServers": {
+    "fruit-stand": {
+      "command": "docker",
+      "args": ["run", "--rm", "-i", "-e", "FRUITSTAND_API_KEY", "ghcr.io/fruitstanddev/fruitstand-mcp"],
+      "env": { "FRUITSTAND_API_KEY": "YOUR_API_KEY" }
+    }
+  }
+}
+```
+
+The container only bridges stdio to `api.fruitstand.dev/mcp` — all data comes from the hosted server.
+
 ### 3. Ask a question
 
 > *"Compare the 1-year, 5-year, and since-inception returns of SPY, QQQ, and VTI, and tell me which had the best 2022 calendar year."*
