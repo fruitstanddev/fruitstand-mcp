@@ -1,4 +1,5 @@
 [![Fruit Stand Fund Returns — MCP Server MCP server — quality and maintenance score on Glama](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp/badges/score.svg)](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp)
+[![smithery badge](https://smithery.ai/badge/fruitstand/fund-returns)](https://smithery.ai/servers/fruitstand/fund-returns)
 
 # Fruit Stand Fund Returns — MCP Server
 
