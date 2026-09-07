@@ -14,5 +14,7 @@ RUN npm install -g mcp-remote@0.8.3
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-# stdio transport — no ports
+# stdio transport — no ports. The MCP endpoint is the command argument;
+# override it to point the bridge at a different Fruit Stand deployment.
 ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["https://api.fruitstand.dev/mcp"]
