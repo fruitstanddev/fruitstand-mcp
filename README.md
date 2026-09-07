@@ -5,6 +5,8 @@ Ask an AI assistant to compare fund performance by ticker — no Morningstar or 
 
 > Hosted, remote MCP over Streamable HTTP · works with Claude, Cursor, and any MCP client · [get a free API key](https://app.fruitstand.dev/pricing)
 
+[![Fruit Stand Fund Returns — MCP Server MCP server — quality and maintenance score on Glama](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp/badges/card.svg)](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp)
+
 ![Comparing SPY, QQQ and VTI ETF returns through the Fruit Stand Fund Returns MCP server in Claude](assets/demo.gif)
 
 <!-- assets/demo.mp4 is the source clip; regenerate the GIF with scripts/make-demo-gif.sh -->
