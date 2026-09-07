@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.fruitstand/fund-returns",
+  "title": "Fruit Stand Fund Returns",
+  "description": "Trailing & calendar-year returns for 32,000+ US mutual funds & ETFs — fund performance by ticker.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/fruitstanddev/fruitstand-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://fruitstand.dev",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.fruitstand.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token — your Fruit Stand API key. Get a free key at https://app.fruitstand.dev (no key = 401).",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
