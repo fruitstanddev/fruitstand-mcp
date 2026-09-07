@@ -8,7 +8,7 @@
 # (the commented line right below it).
 set -euo pipefail
 
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/.." || exit 1
 SRC="assets/demo.mp4"
 OUT="assets/demo.gif"
 FPS="${FPS:-12}"
@@ -26,10 +26,10 @@ if command -v gifski >/dev/null; then
   rm -rf "$TMP"
 else
   # palette method keeps colors clean without gifski
-  PAL="$(mktemp).png"
+  PAL="$(mktemp -d)/palette.png"
   ffmpeg -y -i "$SRC" -vf "fps=$FPS,scale=$WIDTH:-1:flags=lanczos,palettegen=stats_mode=diff" "$PAL"
   ffmpeg -y -i "$SRC" -i "$PAL" -lavfi "fps=$FPS,scale=$WIDTH:-1:flags=lanczos [x]; [x][1:v] paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" "$OUT"
-  rm -f "$PAL"
+  rm -rf "$(dirname "$PAL")"
 fi
 
 echo "wrote $OUT ($(du -h "$OUT" | cut -f1))"
