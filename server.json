@@ -3,7 +3,7 @@
   "name": "dev.fruitstand/fund-returns",
   "title": "Fruit Stand Fund Returns",
   "description": "Trailing & calendar-year returns for 32,000+ US mutual funds & ETFs — fund performance by ticker.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "url": "https://github.com/fruitstanddev/fruitstand-mcp",
     "source": "github"
