@@ -1,11 +1,11 @@
+[![Fruit Stand Fund Returns — MCP Server MCP server — quality and maintenance score on Glama](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp/badges/score.svg)](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp)
+
 # Fruit Stand Fund Returns — MCP Server
 
 **Live trailing & calendar-year total returns for 32,000+ US mutual funds and ETFs, as an [MCP](https://modelcontextprotocol.io) server.**
 Ask an AI assistant to compare fund performance by ticker — no Morningstar or Bloomberg contract, free tier, same API key as the REST API.
 
 > Hosted, remote MCP over Streamable HTTP · works with Claude, Cursor, and any MCP client · [get a free API key](https://app.fruitstand.dev/pricing)
-
-[![Fruit Stand Fund Returns — MCP Server MCP server — quality and maintenance score on Glama](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp/badges/card.svg)](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp)
 
 ![Comparing SPY, QQQ and VTI ETF returns through the Fruit Stand Fund Returns MCP server in Claude](assets/demo.gif)
 
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR_API_KEY
 
 Restart the client and the Fruit Stand tools appear.
 
-**Docker** — the same bridge as a container (this repo's `Dockerfile`), for clients that take a `docker` command or for one-click deploy from the [Glama listing](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp):
+**Docker** — the same bridge as a container (this repo's `Dockerfile`), for clients that take a `docker` command:
 
 ```json
 {
