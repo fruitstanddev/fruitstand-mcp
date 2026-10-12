@@ -1,8 +1,10 @@
-[![Fruit Stand Fund Returns — MCP Server MCP server — quality and maintenance score on Glama](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp/badges/score.svg)](https://glama.ai/mcp/servers/fruitstanddev/fruitstand-mcp)
-[![Smithery](https://img.shields.io/badge/Smithery-fruitstand%2Ffund--returns-6E56CF)](https://smithery.ai/servers/fruitstand/fund-returns)
-[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/fruitstanddev/fruitstand-mcp)
-
 # Fruit Stand Fund Returns — MCP Server
+
+> [!WARNING]
+> **Retired 2026-10-12.** The hosted Fruit Stand Fund Returns MCP server (`https://api.fruitstand.dev/mcp`)
+> has been shut down and removed from the MCP registry. The instructions below no longer work. This
+> repository is archived for reference only.
+> The Fund Returns dataset is still available on the Snowflake Marketplace — see [fruitstand.dev/datasets/fund-returns](https://fruitstand.dev/datasets/fund-returns).
 
 **Live trailing & calendar-year total returns for 32,000+ US mutual funds and ETFs, as an [MCP](https://modelcontextprotocol.io) server.**
 Ask an AI assistant to compare fund performance by ticker — no Morningstar or Bloomberg contract, free tier, same API key as the REST API.
